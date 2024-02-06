@@ -20,10 +20,16 @@ struct ContentView: View {
     private var habits: [Habit] {
         return viewModel.habits
     }
+    
+    private func onCreate() {
+        viewModel.add(newHabit)
+        showHabitForm = false
+    }
 
     var body: some View {
         VStack {
-            createNewButton
+//            createNewButton
+            habitForm
             List {
                 ForEach(habits) { habit in
                     Text("\(habit.name)")
@@ -36,28 +42,29 @@ struct ContentView: View {
     }
     
     var habitForm: some View {
-        VStack {
-            TextField("Habit name", text: $newHabit.name)
-            TextField("Habit description", text: $newHabit.description)
+        VStack(spacing: 0) {
+            TextField("new habit name :p", text: $newHabit.name)
+                .plainTextFieldStyle()
+                .fontWeight(.bold)
+            
+            TextField("catch a fish THIS big <*|^=|>", text: $newHabit.description)
+                .plainTextFieldStyle()
+
             addButton
+            Spacer()
         }
+        .background(AppColors.shared.risdBlue)
+        .frame(width: 300, height: 400)
     }
                
     var createNewButton: some View {
-        Button {
-            showHabitForm = true
-        } label: {
-            Text("+")
-        }
+        AddButton(action: { showHabitForm = true })
     }
     
     var addButton: some View {
-        Button {
-            viewModel.add(newHabit)
-            showHabitForm = false
-        } label: {
-            Text("+")
-        }
+        AddButton(action: { onCreate() },
+                  foregroundColor: .white,
+                  backgroundColor: AppColors.shared.orange)
         .disabled(!isValidNewHabit)
     }
 }

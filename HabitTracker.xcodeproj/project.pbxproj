@@ -18,6 +18,9 @@
 		C42F218B2B72D77500EFB3D6 /* HabitTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F218A2B72D77500EFB3D6 /* HabitTrackerUITestsLaunchTests.swift */; };
 		C42F21992B72D8FF00EFB3D6 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F21982B72D8FF00EFB3D6 /* Habit.swift */; };
 		C42F219C2B72DF6F00EFB3D6 /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F219B2B72DF6E00EFB3D6 /* HabitViewModel.swift */; };
+		C42F21A22B72EEDC00EFB3D6 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F21A12B72EEDC00EFB3D6 /* AddButton.swift */; };
+		C42F21A52B72F68300EFB3D6 /* TextFieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F21A42B72F68300EFB3D6 /* TextFieldStyles.swift */; };
+		C42F21A82B72FC2600EFB3D6 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F21A72B72FC2600EFB3D6 /* AppColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		C42F218A2B72D77500EFB3D6 /* HabitTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C42F21982B72D8FF00EFB3D6 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		C42F219B2B72DF6E00EFB3D6 /* HabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
+		C42F21A12B72EEDC00EFB3D6 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
+		C42F21A42B72F68300EFB3D6 /* TextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyles.swift; sourceTree = "<group>"; };
+		C42F21A72B72FC2600EFB3D6 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		C42F21662B72D77300EFB3D6 /* HabitTracker */ = {
 			isa = PBXGroup;
 			children = (
+				C42F21A62B72FC1100EFB3D6 /* Library */,
 				C42F219A2B72DF6100EFB3D6 /* ViewModels */,
 				C42F21972B72D8F400EFB3D6 /* Models */,
 				C42F21672B72D77300EFB3D6 /* HabitTrackerApp.swift */,
@@ -155,6 +162,40 @@
 				C42F219B2B72DF6E00EFB3D6 /* HabitViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C42F219F2B72EEC400EFB3D6 /* ViewLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				C42F21A32B72F67500EFB3D6 /* ViewModifiers */,
+				C42F21A02B72EECC00EFB3D6 /* Buttons */,
+			);
+			path = ViewLibrary;
+			sourceTree = "<group>";
+		};
+		C42F21A02B72EECC00EFB3D6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C42F21A12B72EEDC00EFB3D6 /* AddButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		C42F21A32B72F67500EFB3D6 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C42F21A42B72F68300EFB3D6 /* TextFieldStyles.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		C42F21A62B72FC1100EFB3D6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				C42F219F2B72EEC400EFB3D6 /* ViewLibrary */,
+				C42F21A72B72FC2600EFB3D6 /* AppColors.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +329,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C42F21992B72D8FF00EFB3D6 /* Habit.swift in Sources */,
+				C42F21A82B72FC2600EFB3D6 /* AppColors.swift in Sources */,
+				C42F21A52B72F68300EFB3D6 /* TextFieldStyles.swift in Sources */,
+				C42F21A22B72EEDC00EFB3D6 /* AddButton.swift in Sources */,
 				C42F21682B72D77300EFB3D6 /* HabitTrackerApp.swift in Sources */,
 				C42F216A2B72D77300EFB3D6 /* Persistence.swift in Sources */,
 				C42F219C2B72DF6F00EFB3D6 /* HabitViewModel.swift in Sources */,
