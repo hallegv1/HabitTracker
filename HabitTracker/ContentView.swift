@@ -28,21 +28,36 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-//            createNewButton
-            habitForm
-            List {
-                ForEach(habits) { habit in
-                    Text("\(habit.name)")
-                }
+            appBar
+            ForEach(habits) { habit in
+                Text("\(habit.name)")
             }
+            Spacer()
         }
-        .fullScreenCover(isPresented: $showHabitForm) {
+        .frame(maxWidth: .infinity)
+        .background(Color.black)
+        .sheet(isPresented: $showHabitForm) {
             habitForm
         }
     }
     
+    var appBar: some View {
+        HStack {
+            createNewButton
+        }
+        .padding(10)
+        .frame(maxWidth: .infinity)
+        .background(AppColors.shared.risdBlue)
+    }
+    
     var habitForm: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 10) {
+            Spacer()
+            Text("New Habit")
+                .font(Font(.init(.system, size: 36)))
+                .fontWeight(.heavy)
+                .foregroundColor(AppColors.shared.hotPink)
+            
             TextField("new habit name :p", text: $newHabit.name)
                 .plainTextFieldStyle()
                 .fontWeight(.bold)
@@ -54,7 +69,6 @@ struct ContentView: View {
             Spacer()
         }
         .background(AppColors.shared.risdBlue)
-        .frame(width: 300, height: 400)
     }
                
     var createNewButton: some View {
@@ -63,8 +77,8 @@ struct ContentView: View {
     
     var addButton: some View {
         AddButton(action: { onCreate() },
-                  foregroundColor: .white,
-                  backgroundColor: AppColors.shared.orange)
+                  foregroundColor: AppColors.shared.hotPink,
+                  backgroundColor: .white)
         .disabled(!isValidNewHabit)
     }
 }

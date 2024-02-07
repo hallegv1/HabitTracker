@@ -13,8 +13,8 @@ struct AddButton: View {
     let action: () -> Void
     
     init(action: @escaping () -> Void,
-         foregroundColor: Color = Color(uiColor: UIColor.systemGray2),
-         backgroundColor: Color = Color(uiColor: UIColor.systemGray6)
+         foregroundColor: Color = Color.white,
+         backgroundColor: Color = Color.black
     ) {
         self.action = action
         self.foregroundColor = foregroundColor
@@ -24,9 +24,9 @@ struct AddButton: View {
     var body: some View {
         Button(action: action) {
             HStack {
-                Text("+")
-                    .font(Font(.init(.system, size: 30)))
-                    .fontWeight(.semibold)
+                Image(systemName: "plus")
+                    .font(Font(.init(.system, size: 24)))
+                    .fontWeight(.heavy)
                     .foregroundColor(foregroundColor)
             }
         }
