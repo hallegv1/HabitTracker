@@ -31,6 +31,7 @@ struct ContentView: View {
             appBar
             ForEach(habits) { habit in
                 Text("\(habit.name)")
+                    .foregroundColor(.white)
             }
             Spacer()
         }
