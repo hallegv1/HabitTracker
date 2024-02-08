@@ -27,7 +27,7 @@ final class HTDefaults {
     
     func removeHabit(_ habit: Habit, completion: @escaping (Bool) -> Void) {
         var habits: [Habit] = getAllHabits()
-        if let index = habits.firstIndex(where: { $0.id == habit.id }) {
+        if let index = habits.firstIndex(where: { $0.name == habit.name }) {
             habits.remove(at: index)
             updateHabits(habits)
             completion(true)
