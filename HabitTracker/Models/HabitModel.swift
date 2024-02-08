@@ -1,13 +1,13 @@
 //
-//  Habit.swift
+//  HabitModel.swift
 //  HabitTracker
 //
-//  Created by Halle V` on 2/6/24.
+//  Created by Halle V` on 2/7/24.
 //
 
 import Foundation
 
-struct Habit: Identifiable {
+struct Habit: Identifiable, Codable {
     let id: UUID
     var name, description: String
     var completions: [Date]

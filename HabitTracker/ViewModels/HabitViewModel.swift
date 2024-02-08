@@ -8,22 +8,23 @@
 import Foundation
 
 final class HabitViewModel: ObservableObject {
-    @Published var habits: [Habit] = []
+    @Published var habits: [Habit]
+    
+    init() {
+        self.habits = HTDefaults.shared.getAllHabits()
+    }
     
     func getHabit(completion: @escaping ([Habit]?) -> Void) {
         completion(habits)
     }
     
     func add(_ habit: Habit) {
-        habits.append(habit)
+        HTDefaults.shared.setHabit(habit)
     }
     
     func remove(_ habit: Habit, completion: @escaping (Bool) -> Void) {
-        if let index = habits.firstIndex(where: { $0.id == habit.id }) {
-            habits.remove(at: index)
-            completion(true)
-        } else {
-            completion(false)
+        HTDefaults.shared.removeHabit(habit) { res in
+            completion(res)
         }
     }
 }
