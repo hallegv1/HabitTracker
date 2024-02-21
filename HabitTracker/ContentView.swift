@@ -17,21 +17,21 @@ struct ContentView: View {
         !newHabit.name.isEmpty && !newHabit.description.isEmpty
     }
     
-    private var habits: [Habit] {
-        return viewModel.habits
-    }
-    
     private func onCreate() {
         viewModel.add(newHabit)
         showHabitForm = false
     }
-
+    
     var body: some View {
         NavigationStack {
             appBar
-            ForEach(habits) { habit in
-                habitItem(habit)
+            List {
+                ForEach(viewModel.habits) { habit in
+                    habitItem(habit)
+                }
+                .onDelete(perform: viewModel.deleteHabit)
             }
+            .listStyle(.automatic)
             Spacer()
         }
         .frame(maxWidth: .infinity)
@@ -49,22 +49,15 @@ struct ContentView: View {
         .background(AppColors.shared.risdBlue)
     }
     
-    func habitItem(_ habit: Habit) -> some View {
-        NavigationLink {
-            HabitCard(habit: habit)
-        } label: {
-            VStack {
-                Text("\(habit.name)")
-                    .font(.title)
-                    .padding(.vertical, 5)
-                    .frame(maxWidth: .infinity)
-            }
-            .background(Color.white)
-        }
+    func habitItem(_ habit: HabitEntity) -> some View {
+        HabitCard(habit: habit)
+//            .onTapGesture {
+//                viewModel.updateHabit(habit)
+//            }
     }
     
-    private func delete(_ habit: Habit) {
-        viewModel.remove(habit) { _ in }
+    private func delete(_ habit: HabitEntity) {
+        print("IMPLEMENT DELETE")
     }
     
     var habitForm: some View {
@@ -81,13 +74,13 @@ struct ContentView: View {
             
             TextField("catch a fish THIS big <*|^=|>", text: $newHabit.description)
                 .plainTextFieldStyle()
-
+            
             addButton
             Spacer()
         }
         .background(AppColors.shared.risdBlue)
     }
-               
+    
     var createNewButton: some View {
         AddButton(action: { showHabitForm = true })
     }

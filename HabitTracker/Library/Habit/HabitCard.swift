@@ -9,21 +9,25 @@ import SwiftUI
 
 struct HabitCard: View {
     
-    var habit: Habit
+    var habit: HabitEntity
     
     var body: some View {
         VStack {
-            Text("\(habit.name)")
+            Text("\(habit.name ?? "")")
                 .font(.title)
-               
+                .padding(.vertical, 10)
             
-            Text("\(habit.description)")
+            Text("\(habit.desc ?? "")")
                 .font(.subheadline)
-            
-            Spacer()
         }
-        .padding(.vertical, 5)
+        .padding(.vertical, 20)
         .frame(maxWidth: .infinity)
     }
     
+}
+
+struct HabitCard_Previews: PreviewProvider {
+    static var previews: some View {
+        HabitCard(habit: HabitEntity())
+    }
 }

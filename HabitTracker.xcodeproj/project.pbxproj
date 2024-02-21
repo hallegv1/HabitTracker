@@ -21,6 +21,7 @@
 		C42F21A52B72F68300EFB3D6 /* TextFieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F21A42B72F68300EFB3D6 /* TextFieldStyles.swift */; };
 		C42F21A82B72FC2600EFB3D6 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F21A72B72FC2600EFB3D6 /* AppColors.swift */; };
 		C44C31352B869B7D00BA5ABF /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C31342B869B7D00BA5ABF /* HabitCard.swift */; };
+		C44C31382B86AC5900BA5ABF /* HabitsContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C44C31362B86AC5900BA5ABF /* HabitsContainer.xcdatamodeld */; };
 		C4DBE39B2B7440750021E333 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBE39A2B7440750021E333 /* HabitModel.swift */; };
 		C4DBE39D2B74795D0021E333 /* HTDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBE39C2B74795D0021E333 /* HTDefaults.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		C42F21A42B72F68300EFB3D6 /* TextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyles.swift; sourceTree = "<group>"; };
 		C42F21A72B72FC2600EFB3D6 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		C44C31342B869B7D00BA5ABF /* HabitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
+		C44C31372B86AC5900BA5ABF /* HabitsContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HabitsContainer.xcdatamodel; sourceTree = "<group>"; };
 		C4DBE39A2B7440750021E333 /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
 		C4DBE39C2B74795D0021E333 /* HTDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 				C42F21722B72D77400EFB3D6 /* HabitTracker.entitlements */,
 				C42F216B2B72D77300EFB3D6 /* HabitTracker.xcdatamodeld */,
 				C42F21732B72D77400EFB3D6 /* Preview Content */,
+				C44C31362B86AC5900BA5ABF /* HabitsContainer.xcdatamodeld */,
 			);
 			path = HabitTracker;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				C4DBE39B2B7440750021E333 /* HabitModel.swift in Sources */,
 				C42F21682B72D77300EFB3D6 /* HabitTrackerApp.swift in Sources */,
 				C42F216A2B72D77300EFB3D6 /* Persistence.swift in Sources */,
+				C44C31382B86AC5900BA5ABF /* HabitsContainer.xcdatamodeld in Sources */,
 				C42F219C2B72DF6F00EFB3D6 /* HabitViewModel.swift in Sources */,
 				C44C31352B869B7D00BA5ABF /* HabitCard.swift in Sources */,
 				C4DBE39D2B74795D0021E333 /* HTDefaults.swift in Sources */,
@@ -697,6 +701,16 @@
 			);
 			currentVersion = C42F216C2B72D77300EFB3D6 /* HabitTracker.xcdatamodel */;
 			path = HabitTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C44C31362B86AC5900BA5ABF /* HabitsContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C44C31372B86AC5900BA5ABF /* HabitsContainer.xcdatamodel */,
+			);
+			currentVersion = C44C31372B86AC5900BA5ABF /* HabitsContainer.xcdatamodel */;
+			path = HabitsContainer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
