@@ -27,16 +27,14 @@ struct ContentView: View {
     }
 
     var body: some View {
-        VStack {
+        NavigationStack {
             appBar
             ForEach(habits) { habit in
-                Text("\(habit.name)")
-                    .foregroundColor(.white)
+                habitItem(habit)
             }
             Spacer()
         }
         .frame(maxWidth: .infinity)
-        .background(Color.black)
         .sheet(isPresented: $showHabitForm) {
             habitForm
         }
@@ -49,6 +47,24 @@ struct ContentView: View {
         .padding(10)
         .frame(maxWidth: .infinity)
         .background(AppColors.shared.risdBlue)
+    }
+    
+    func habitItem(_ habit: Habit) -> some View {
+        NavigationLink {
+            HabitCard(habit: habit)
+        } label: {
+            VStack {
+                Text("\(habit.name)")
+                    .font(.title)
+                    .padding(.vertical, 5)
+                    .frame(maxWidth: .infinity)
+            }
+            .background(Color.white)
+        }
+    }
+    
+    private func delete(_ habit: Habit) {
+        viewModel.remove(habit) { _ in }
     }
     
     var habitForm: some View {

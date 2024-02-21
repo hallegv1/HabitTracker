@@ -20,6 +20,7 @@
 		C42F21A22B72EEDC00EFB3D6 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F21A12B72EEDC00EFB3D6 /* AddButton.swift */; };
 		C42F21A52B72F68300EFB3D6 /* TextFieldStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F21A42B72F68300EFB3D6 /* TextFieldStyles.swift */; };
 		C42F21A82B72FC2600EFB3D6 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F21A72B72FC2600EFB3D6 /* AppColors.swift */; };
+		C44C31352B869B7D00BA5ABF /* HabitCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44C31342B869B7D00BA5ABF /* HabitCard.swift */; };
 		C4DBE39B2B7440750021E333 /* HabitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBE39A2B7440750021E333 /* HabitModel.swift */; };
 		C4DBE39D2B74795D0021E333 /* HTDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DBE39C2B74795D0021E333 /* HTDefaults.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		C42F21A12B72EEDC00EFB3D6 /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		C42F21A42B72F68300EFB3D6 /* TextFieldStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyles.swift; sourceTree = "<group>"; };
 		C42F21A72B72FC2600EFB3D6 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		C44C31342B869B7D00BA5ABF /* HabitCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCard.swift; sourceTree = "<group>"; };
 		C4DBE39A2B7440750021E333 /* HabitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitModel.swift; sourceTree = "<group>"; };
 		C4DBE39C2B74795D0021E333 /* HTDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,8 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				C42F21A62B72FC1100EFB3D6 /* Library */,
-				C42F219A2B72DF6100EFB3D6 /* ViewModels */,
-				C42F21972B72D8F400EFB3D6 /* Models */,
 				C42F21672B72D77300EFB3D6 /* HabitTrackerApp.swift */,
 				C42F21692B72D77300EFB3D6 /* Persistence.swift */,
 				C42F216E2B72D77300EFB3D6 /* ContentView.swift */,
@@ -150,22 +150,6 @@
 			path = HabitTrackerUITests;
 			sourceTree = "<group>";
 		};
-		C42F21972B72D8F400EFB3D6 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C4DBE39A2B7440750021E333 /* HabitModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		C42F219A2B72DF6100EFB3D6 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				C42F219B2B72DF6E00EFB3D6 /* HabitViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		C42F219F2B72EEC400EFB3D6 /* ViewLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,11 +178,22 @@
 		C42F21A62B72FC1100EFB3D6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				C44C31332B869B6800BA5ABF /* Habit */,
 				C42F219F2B72EEC400EFB3D6 /* ViewLibrary */,
 				C42F21A72B72FC2600EFB3D6 /* AppColors.swift */,
 				C4DBE39C2B74795D0021E333 /* HTDefaults.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		C44C31332B869B6800BA5ABF /* Habit */ = {
+			isa = PBXGroup;
+			children = (
+				C4DBE39A2B7440750021E333 /* HabitModel.swift */,
+				C42F219B2B72DF6E00EFB3D6 /* HabitViewModel.swift */,
+				C44C31342B869B7D00BA5ABF /* HabitCard.swift */,
+			);
+			path = Habit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +333,7 @@
 				C42F21682B72D77300EFB3D6 /* HabitTrackerApp.swift in Sources */,
 				C42F216A2B72D77300EFB3D6 /* Persistence.swift in Sources */,
 				C42F219C2B72DF6F00EFB3D6 /* HabitViewModel.swift in Sources */,
+				C44C31352B869B7D00BA5ABF /* HabitCard.swift in Sources */,
 				C4DBE39D2B74795D0021E333 /* HTDefaults.swift in Sources */,
 				C42F216F2B72D77300EFB3D6 /* ContentView.swift in Sources */,
 				C42F216D2B72D77300EFB3D6 /* HabitTracker.xcdatamodeld in Sources */,
